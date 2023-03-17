@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    background-color: black;
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    animation-name: animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.box:hover {
+    animation-name: anim-hover;
+}
+
+@keyframes animation {
+    0% {
+        transform: rotate3d(0, 0.5, 1, 0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate3d(0, 0.5, 1, 360deg);
+        opacity: 0.3;
+    }
+    100% {
+        transform: rotate3d(0, 0.5, 1, 0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes anim-hover {
+    0% {
+        background-color: crimson;
+    }
+    50% {
+        background-color: aqua;
+    }
+    100%{
+        background-color: crimson;
+    }
+}
